@@ -1,74 +1,66 @@
 # Enlaces en Linux: Hard Links y Soft Links
 
 En Linux existen dos tipos principales de enlaces:
-
 - Hard Link (enlace duro)
-- Soft Link o Symbolic Link (enlace simbolico)
+- Soft Link o Symbolic Link (enlace simbólico)
 
-Comprender la diferencia es fundamental para entender como funciona el sistema de archivos.
+Comprender la diferencia es fundamental para entender cómo funciona el sistema de archivos.
 
 ---
 
-## 1. Hard Link (Enlace Duro)
+## 1️⃣ Hard Link (Enlace Duro)
 
 Un hard link es un nuevo nombre que apunta al mismo inodo que el archivo original.
 
 ### Crear un hard link
-
 ```bash
 ln archivo.txt copia.txt
 ```
 
-### Que sucede internamente
+### Qué sucede internamente
 
 Si ejecutamos:
-
 ```bash
 ls -i archivo.txt copia.txt
 ```
 
-Veremos que ambos tienen el mismo numero de inodo.
+Veremos que ambos tienen el mismo número de inodo.
 
 Ejemplo:
-
 ```
-2359510 archivo.txt
-2359510 copia.txt
+2359510 archivo.txt  
+2359510 copia.txt  
 ```
 
 Ambos nombres apuntan al mismo inodo.
 
-### Caracteristicas
-
+### Características
 - Comparten el mismo inodo
 - Comparten el mismo contenido
 - Si se modifica uno, se modifica el otro
-- El archivo solo se elimina cuando el contador de Links llega a 0
+- El archivo solo se elimina cuando el contador de `Links` llega a 0
 - No se pueden hacer hard links a directorios (para evitar ciclos)
 - No funcionan entre distintos sistemas de archivos
 
 ---
 
-## 2. Soft Link (Enlace Simbolico)
+## 2️⃣ Soft Link (Enlace Simbólico)
 
 Un soft link es un archivo especial que apunta al nombre de otro archivo.
 
 ### Crear un soft link
-
 ```bash
 ln -s archivo.txt acceso.txt
 ```
 
-### Que sucede internamente
+### Qué sucede internamente
 
 Si ejecutamos:
-
 ```bash
 ls -l
 ```
 
 Veremos algo como:
-
 ```
 acceso.txt -> archivo.txt
 ```
@@ -76,15 +68,13 @@ acceso.txt -> archivo.txt
 El soft link tiene su propio inodo distinto al original.
 
 Si ejecutamos:
-
 ```bash
 ls -i archivo.txt acceso.txt
 ```
 
-Veremos numeros de inodo diferentes.
+Veremos números de inodo diferentes.
 
-### Caracteristicas
-
+### Características
 - Tiene un inodo propio
 - Apunta al nombre del archivo original
 - Puede apuntar a directorios
@@ -95,37 +85,34 @@ Veremos numeros de inodo diferentes.
 
 ## Diferencia clave
 
-| Caracteristica                   | Hard Link | Soft Link |
-|----------------------------------|-----------|-----------|
-| Comparte inodo                   | Si        | No        |
-| Puede cruzar filesystem          | No        | Si        |
-| Puede enlazar directorios        | No        | Si        |
-| Se rompe si se borra el original | No        | Si        |
+| Característica | Hard Link | Soft Link |
+|----------------|-----------|-----------|
+| Comparte inodo | Sí | No |
+| Puede cruzar filesystem | No | Sí |
+| Puede enlazar directorios | No | Sí |
+| Se rompe si se borra el original | No | Sí |
 
 ---
 
-## Como pensarlo mentalmente
+## Cómo pensarlo mentalmente
 
 **Hard Link:**
-
 ```
-nombre -> mismo inodo <- otro nombre
+nombre → mismo inodo ← otro nombre
 ```
 
 **Soft Link:**
-
 ```
-nombre -> inodo propio -> apunta al nombre original -> inodo real
+nombre → inodo propio → apunta al nombre original → inodo real
 ```
 
 ---
 
-## Conclusion
+## Conclusión
 
-Un hard link es simplemente otro nombre para el mismo archivo.
-
+Un hard link es simplemente otro nombre para el mismo archivo.  
 Un soft link es un acceso indirecto que referencia al archivo original por su nombre.
 
-Comprender esta diferencia ayuda a entender mejor como Linux gestiona archivos, almacenamiento y referencias internas.
+Comprender esta diferencia ayuda a entender mejor cómo Linux gestiona archivos, almacenamiento y referencias internas.
 
 
