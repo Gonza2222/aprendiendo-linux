@@ -3,7 +3,7 @@
 En Linux existen dos tipos principales de enlaces:
 
 - Hard Link (enlace duro)
-- Soft Link o Symbolic Link (enlace simbólico)
+- Soft Link o Symbolic Link (enlace simbolico)
 
 Comprender la diferencia es fundamental para entender como funciona el sistema de archivos.
 
@@ -43,7 +43,7 @@ Ambos nombres apuntan al mismo inodo.
 - Comparten el mismo inodo
 - Comparten el mismo contenido
 - Si se modifica uno, se modifica el otro
-- El archivo solo se elimina cuando el contador de `Links` llega a 0
+- El archivo solo se elimina cuando el contador de Links llega a 0
 - No se pueden hacer hard links a directorios (para evitar ciclos)
 - No funcionan entre distintos sistemas de archivos
 
@@ -95,12 +95,12 @@ Veremos numeros de inodo diferentes.
 
 ## Diferencia clave
 
-| Caracteristica       | Hard Link | Soft Link |
-|----------------------|-----------|-----------|
-| Comparte inodo       | Si        | No        |
-| Puede cruzar filesystem | No     | Si        |
-| Puede enlazar directorios | No   | Si        |
-| Se rompe si se borra el original | No | Si  |
+| Caracteristica                   | Hard Link | Soft Link |
+|----------------------------------|-----------|-----------|
+| Comparte inodo                   | Si        | No        |
+| Puede cruzar filesystem          | No        | Si        |
+| Puede enlazar directorios        | No        | Si        |
+| Se rompe si se borra el original | No        | Si        |
 
 ---
 
