@@ -1,4 +1,5 @@
 # Enlaces en Linux: Hard Links y Soft Links
+
 En Linux existen dos tipos principales de enlaces:
 - Hard Link (enlace duro)
 - Soft Link o Symbolic Link (enlace simbólico)
@@ -113,3 +114,4 @@ Un hard link es simplemente otro nombre para el mismo archivo.
 Un soft link es un acceso indirecto que referencia al archivo original por su nombre.
 
 Comprender esta diferencia ayuda a entender mejor cómo Linux gestiona archivos, almacenamiento y referencias internas.
+
