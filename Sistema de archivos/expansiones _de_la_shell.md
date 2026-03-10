@@ -85,5 +85,5 @@ echo "Usuario: $USER en $(hostname)"
 
 > 💡 **Tip:** Podés probar cualquier expansión con `echo` antes de ejecutarla para ver cómo la interpreta la shell.
 > ```bash
-> echo rm *.txt   # muestra qué archivos borraría, sin borrar nada
+> echo rm *.txt   # muestra qué archivos borraría, sin borrar nada.
 > ```
