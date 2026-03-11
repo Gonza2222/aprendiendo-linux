@@ -1,5 +1,5 @@
 
-Este repositorio documenta mi proceso de aprendizaje en Linux como parte de mi formación en la Tecnicatura en Análisis de Sistemas y mi interés en ciberseguridad.
+Este repositorio documenta mi proceso de aprendizaje en Linux 
 
 ## Contenido
 
