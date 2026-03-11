@@ -12,4 +12,4 @@ Crear un entorno virtual para practicar Linux sin afectar el sistema principal.
 - Ubuntu Desktop como sistema invitado
 
 ## Resultado
-Máquina virtual funcionando correctamente para prácticas.
+Máquina virtual funcionando correctamente para prácticas
