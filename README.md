@@ -1,26 +1,31 @@
+# 🐧 Aprendiendo Linux
 
-Este repositorio documenta mi proceso de aprendizaje en Linux 
+Este repositorio documenta mi proceso de aprendizaje en Linux.
 
-## Contenido
+---
 
-### Fundamentos
+## 📁 Contenido
+
+### 🗂️ Sistema de archivos
+
 - Comandos básicos
 - Wildcards
 - Expansiones de la shell
 - Sustitución de comandos
-
-### Sistema de archivos
+- Uso de comillas en Linux
 - Inodos
 - Dentries
 - Manejo de ficheros
-- Hard links y symbolic links
-
-### Shell
-- Uso de comillas
-
-### Entorno
+- Hard links y Soft links
 - Instalación y configuración de VMware
 
-## Objetivo
+### 🔗 Redirecciones y Pipelines
+
+- Entrada, salida y error estándar
+- Pipelines, filtros y búsquedas
+
+---
+
+## 🎯 Objetivo
 
 Construir una base sólida en Linux documentando los conceptos que voy aprendiendo.
