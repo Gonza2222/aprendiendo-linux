@@ -80,13 +80,15 @@ grep "error" log.txt | wc -l   # cuántas líneas contienen "error"
 ## `grep` — Buscar texto
 
 ```bash
-grep "palabra" archivo.txt       # busca líneas que contengan "palabra"
-grep -i "palabra" archivo.txt    # ignora mayúsculas/minúsculas
-grep -r "palabra" carpeta/       # busca en todos los archivos de una carpeta
-grep -n "palabra" archivo.txt    # muestra el número de línea
-grep -v "palabra" archivo.txt    # muestra las líneas que NO contienen "palabra"
-grep -c "palabra" archivo.txt    # cuenta cuántas líneas contienen "palabra"
-grep -l "palabra" *.txt          # muestra qué archivos contienen "palabra"
+grep "palabra" archivo.txt          # busca líneas que contengan "palabra"
+grep -i "palabra" archivo.txt       # ignora mayúsculas/minúsculas
+grep -r "palabra" carpeta/          # busca en todos los archivos de una carpeta
+grep -n "palabra" archivo.txt       # muestra el número de línea
+grep -v "palabra" archivo.txt       # muestra las líneas que NO contienen "palabra"
+grep -c "palabra" archivo.txt       # cuenta cuántas líneas contienen "palabra"
+grep -l "palabra" *.txt             # muestra qué archivos contienen "palabra"
+grep -o "palabra" archivo.txt       # muestra solo la parte que coincide, no la línea entera
+grep -o "uno\|dos\|tres" archivo.txt  # busca varias palabras a la vez (o esto o aquello)
 ```
 
 ### Con pipe
